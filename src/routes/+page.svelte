@@ -238,9 +238,6 @@
         .attr("text-anchor", "middle")
         .attr("class", "chart-axis")
         .text("Count of tracts");
-      // svg.append("text").attr("x", width / 2).attr("y", margin.top / 2)
-      //   .attr("text-anchor", "middle").style("font-weight", "bold")
-      //   .text(title || "Histogram");
       
       // TOOLTIP
       selectedBin.subscribe(bin => {
