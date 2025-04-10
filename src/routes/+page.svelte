@@ -140,14 +140,14 @@
   }
   
   onMount(async () => {
-    const raw2010 = await d3.csv("/aggregated2010.csv");
+    const raw2010 = await d3.csv("aggregated2010.csv");
     raw2010.forEach(d => {
       d.flip_ind_sum = +d.flip_ind_sum;
       const mhiVal = +d.mhi;
       d.income_bucket = mhiVal < 60000 ? "Low" : (mhiVal <= 100000 ? "Medium" : "High");
     });
   
-    const raw2020 = await d3.csv("/aggregated2020.csv");
+    const raw2020 = await d3.csv("aggregated2020.csv");
     raw2020.forEach(d => {
       d.flip_ind_sum = +d.flip_ind_sum;
       const mhiVal = +d.mhi;
