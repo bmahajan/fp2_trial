@@ -9,11 +9,6 @@
 
     const BUCKETS = ["Low", "Medium", "High"];
 
-    // // Get CSS variables
-    // const getColor = (varName) => {
-    //   return getComputedStyle(document.documentElement).getPropertyValue(varName).trim();
-    //   };
-
     // Define graph colors
     const color = d3.scaleOrdinal()
       .domain(BUCKETS)
@@ -188,9 +183,6 @@
 
       svg.append("g").attr("transform", `translate(0, ${height - margin.bottom})`).call(d3.axisBottom(x));
       svg.append("g").attr("transform", `translate(${margin.left}, 0)`).call(d3.axisLeft(y));
-
-      // MOVED THIS TO THE TOP
-      // const color = d3.scaleOrdinal().domain(BUCKETS).range(["steelblue", "orange", "green"]);
 
       const tooltip = d3.select(container)
         .append("div")
